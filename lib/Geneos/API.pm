@@ -4,7 +4,7 @@ Geneos::API - Handy Perl interface to ITRS Geneos XML-RPC Instrumentation API
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =head1 SYNOPSIS
 
@@ -41,11 +41,11 @@ C<Geneos::API> is a Perl module that implements ITRS XML-RPC Instrumentation API
 
 $url is required and must be in the form:
 
-http://host:port/path
+C<http://host:port/path>
 
 For example:
 
-my $api = Geneos::API->new("http://localhost:7036/xmlrpc");
+    my $api = Geneos::API->new("http://localhost:7036/xmlrpc");
 
 XML-RPC Client is initialized upon call to the API constructor
 
@@ -53,10 +53,10 @@ Options
 
 The constructor accepts a reference to the options hash as optional second parameter:
 
-my $api = Geneos::API->new("http://localhost:7036/xmlrpc", {
-    api => {raise_error => 1,},
-    ua  => {timeout => 5,},
-});
+    my $api = Geneos::API->new("http://localhost:7036/xmlrpc", {
+        api => {raise_error => 1,},
+        ua  => {timeout => 5,},
+    });
 
 =head4 api - XML-RPC options
 
@@ -125,7 +125,7 @@ HTTP or XML-RPC error code.
 
 =item * message
 
-Error description.
+Error string.
 
 =item * class
 
@@ -362,7 +362,7 @@ Adds the managed entity to the particular data section Returns true on success, 
 
 =over 4
 
-=item * L<http://www.itrsgroup.com/> ITRS Group &#8211; Application Performance Management in Real-Time
+=item * L<http://www.itrsgroup.com/> ITRS Group - Application Performance Management in Real-Time
 
 =item * L<http://xmlrpc.scripting.com/> XML-RPC resource
 
@@ -747,7 +747,7 @@ at your option, any later version of Perl 5 you may have available.
 
     use Carp;
 
-    our $VERSION = '0.10';
+    our $VERSION = '0.11';
 
     sub new {bless({_error=>undef,}, shift)->_init(@_)}
 
@@ -980,7 +980,7 @@ at your option, any later version of Perl 5 you may have available.
 
     package Geneos::API;
 
-    our $VERSION = '0.10';
+    our $VERSION = '0.11';
 
     use base 'Geneos::Base';
 

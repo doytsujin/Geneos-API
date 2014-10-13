@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'Geneos::API',
     VERSION_FROM      => 'lib/Geneos/API.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => {'XML::LibXML' => '1.97', 'LWP::UserAgent' => '6.04',}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Geneos/API.pm', # retrieve abstract from module
        AUTHOR         => 'Ivan Dmitriev <tot@cpan.org>') : ()),
