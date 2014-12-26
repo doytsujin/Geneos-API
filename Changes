@@ -1,8 +1,12 @@
 Revision history for Perl extension Geneos::API.
 
 0.10  Mon Oct 13 14:21:39 2014
-	- original version; created by h2xs 1.23 with options
-		-AX --skip-exporter --use-new-tests -n Geneos::API
+	- original version
 
 0.11  Mon Oct 13 15:11:19 2014
         - updated the POD documentation 
+
+0.12  Fri Dec 26 16:21:42 2014
+        - added API Streams implementation
+        - added custom error and debug handlers
+        - updated the POD documentation
